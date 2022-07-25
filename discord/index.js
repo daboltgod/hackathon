@@ -31,6 +31,10 @@ const client = new Discord.Client({
   ],
 });
 
+client.once('ready', () => {
+	console.log('Ready on YOUR BOT!');
+});
+
 client.on("ready", () => {
    require("./dashboard/index.js")(client);
 })
