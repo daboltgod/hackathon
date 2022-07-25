@@ -1,5 +1,6 @@
 const Discord = requiree('discord.js);
 const fs = require('fs');
+const dash = require('./dashboard/settings.json');
 const config = require("./config.json")
 
 const client = new Discord.Client({
@@ -30,5 +31,8 @@ const client = new Discord.Client({
   ],
 });
 
+client.on("ready", () => {
+   require("./dashboard/index.js")(client);
+})
 
 client.login(process.env.token || config.token);
