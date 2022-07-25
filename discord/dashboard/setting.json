@@ -1,0 +1,12 @@
+{
+    "website": {
+        "support": "DISCORD URL HERE",
+        "domain" : "https://domain-name.com"
+    },
+    "config": {
+        "port": 80,
+        "callback": "https://domain-name/callback",
+        "clientID": "CLIENT ID",
+        "secret": "CLIENT SECRET"
+    }
+}
