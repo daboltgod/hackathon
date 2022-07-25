@@ -2,8 +2,8 @@ const Discord = requiree('discord.js);
 const fs = require('fs');
 const dash = require('./dashboard/settings.json');
 const config = require("./config.json")
+const path = require('path');
 
-const client = new Discord.Client({
   fetchAllMembers: false,
   restTimeOffset: 0,
   failIfNotExists: false,
@@ -30,6 +30,12 @@ const client = new Discord.Client({
     //Discord.Intents.FLAGS.DIRECT_MESSAGE_TYPING
   ],
 });
+
+const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+
+client.commands = new Collection();
+
+const client = new Discord.Client({
 
 client.once('ready', () => {
 	console.log('Ready on YOUR BOT!');
